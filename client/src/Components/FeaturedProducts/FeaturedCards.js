@@ -7,9 +7,10 @@ function FeaturedCards() {
     <>
     <section className={styles["featured-products-section"]}>
     <div class="featured-products">
+      <h2 style={{color:'Green', textAlign:'center'}}>Trending Now</h2>
+    <ProductCard/>
     </div>
     </section>
-    <ProductCard/>
     </>
   )
 }
