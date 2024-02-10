@@ -1,5 +1,6 @@
 import React from 'react'
 import './hero-banner.css'
+import Button from '../Utils/Button'
 
 function HeroBanner() {
   return (
@@ -13,12 +14,11 @@ function HeroBanner() {
         <div class="divelementor-widget-container">
             <span class="we-print-what-container1">
               <p class="we-print-what">
-                Click edit button to change this text. Lorem ipsum dolor sit
-                amet,
+              Step into Style,Discover Your Signature Look with Our Latest Collection
               </p>
-              <p class="we-print-what">consectetur adipiscing elit. Sapien.</p>
+              <p class="we-print-what" style={{color:'orange'}}>Find Your Perfect Outfit with Us</p>
             </span>
-            <button>Get Started</button>
+            <Button children='Get Started'/>
         </div>
       </div>
       <div class="divelementor-element1">
