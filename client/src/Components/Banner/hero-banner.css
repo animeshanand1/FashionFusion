@@ -1,166 +1,4 @@
-.spanelementor-divider-separat {
-    position: absolute;
-    height: calc(100% - 30px);
-    width: calc(100% - 495.9px);
-    top: 0.94rem;
-    right: 30.99rem;
-    bottom: 0.94rem;
-    left: 0;
-    border-top: 2.5px solid #ff5151;
-    box-sizing: border-box;
-  }
-  .divelementor-divider {
-    position: absolute;
-    width: 100%;
-    top: 13.99rem;
-    right: 0;
-    left: 0;
-    height: 2.03rem;
-  }
-  .best-quality-products {
-    position: absolute;
-    top: 0.08rem;
-    left: 0;
-    line-height: 1.81rem;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    width: 12.3rem;
-    height: 1.56rem;
-  }
-  .heading-5 {
-    position: absolute;
-    width: 100%;
-    top: 16.96rem;
-    right: 0;
-    left: 0;
-    height: 1.81rem;
-    font-size: 1.13rem;
-  }
-  .we-print-what {
-    margin: 0;
-  }
-  .we-print-what-container1 {
-    width: 100%;
-  }
-  .we-print-what-container {
-    position: absolute;
-    top: -0.62rem;
-    left: 0;
-    line-height: 4.38rem;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    width: 28.75rem;
-    height: 10.01rem;
-  }
-  .heading-1 {
-    position: absolute;
-    width: 100%;
-    top: 19.71rem;
-    right: 0;
-    left: 0;
-    height: 8.76rem;
-    font-size: 3.99rem;
-  }
-  .click-edit-button-container {
-    position: absolute;
-    top: 0.24rem;
-    left: 0;
-    line-height: 1.85rem;
-    display: flex;
-    align-items: center;
-    width: 31.92rem;
-    height: 3.18rem;
-  }
-  .divelementor-widget-container {
-    position: absolute;
-    height: calc(100% - 669.3px);
-    width: 100%;
-    top: 29.41rem;
-    right: 0;
-    bottom: 12.43rem;
-    left: 0;
-  }
-  .get-started {
-    top: 0.81rem;
-    left: calc(50% - 61.45px);
-    line-height: 1rem;
-    text-transform: uppercase;
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 6.38rem;
-    height: 0.99rem;
-  }
-  .get-started,
-  .link,
-  .symbol {
-    position: absolute;
-  }
-  .symbol {
-    top: 0.73rem;
-    left: calc(50% + 53.45px);
-    line-height: 1rem;
-    text-transform: uppercase;
-    font-family: "Font Awesome 5 Free";
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 0.52rem;
-    height: 1.02rem;
-  }
-  .link {
-    top: 0.5rem;
-    left: 0;
-    border-radius: 5px;
-    background-color: #ff5151;
-    width: 12.68rem;
-    height: 2.62rem;
-  }
-  .divelementor-widget-container1 {
-    position: absolute;
-    height: calc(100% - 704.1px);
-    width: 100%;
-    top: 35.64rem;
-    right: 0;
-    bottom: 8.37rem;
-    left: 0;
-    text-align: center;
-    color: #fff;
-  }
-  .divelementor-element {
-    position: absolute;
-    height: 100%;
-    width: calc(100% - 1135.3px);
-    top: 0;
-    right: 55.76rem;
-    bottom: 0;
-    left: 15.19rem;
-  }
-  .image26-freepng-icon {
-    position: absolute;
-    top: calc(50% - 237px);
-    left: calc(50% - 269px);
-    width: 33.63rem;
-    height: 38.38rem;
-    overflow: hidden;
-    object-fit: cover;
-  }
-  .divelementor-element1 {
-    position: absolute;
-    width: calc(100% - 1037.3px);
-    right: 15.2rem;
-    bottom: 0;
-    left: 49.63rem;
-    height: 47.13rem;
-    background-color: transparent;
-  }
-  .divelementor-element1 img{
-    mix-blend-mode: multiply;
-  }
-  .websitedemosnet-by-htmltode {
+.hero-banner-container {
     width: 100%;
     position: relative;
     background: linear-gradient(
@@ -168,10 +6,28 @@
       rgba(255, 255, 255, 0),
       rgba(235, 237, 239, 0.87)
     );
-    height: 47.13rem;
-    text-align: left;
-    font-size: 0.99rem;
+    font-size: 1.2rem;
     color: #415161;
     font-family: Poppins;
   }
-  
+  .divelementor-element {
+    position: absolute;
+    height: 100%;
+    top: 20%;
+    left: 15rem;
+  }
+  .divelementor-element1 {
+    position: relative;
+    width: calc(100% - 1037.3px);
+    right: 15.2rem;
+    bottom: 0;
+    left: 49.63rem;
+    height: 47.13rem;
+  }
+  .image26-freepng-icon {
+    position: absolute;
+    top: calc(25% - 200px);
+    left: calc(60% - 210px);
+    overflow: hidden;
+    object-fit: cover;
+  }
