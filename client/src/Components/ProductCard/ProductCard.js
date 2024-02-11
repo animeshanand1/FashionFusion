@@ -14,7 +14,7 @@ function ProductCard({ productTitle, tagLine, price, backgroundImageUrl }) {
       </div>
       <div className={styles["divelementor-button-wrapper"]}>
         <div className={styles.link2}>
-          <b className={styles["check-out"]}>Check Out</b>
+          <div className={styles["check-out"]}>Check Out</div>
         </div>
       </div>
     </section>
