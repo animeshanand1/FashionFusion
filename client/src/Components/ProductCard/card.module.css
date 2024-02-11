@@ -1,62 +1,111 @@
-.main-card-container {
-  width: 100%;
-  position: relative;
-  text-align: left;
-  color: rgba(238, 238, 238, 0.9);
+
+.wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: Montserrat;
+	background: #262626;
+	margin-left: 10px;
+	border: 1px solid black;
 }
-  .before {
-    top: 0;
-    background-color: #000;
-    width: 23.33rem;
-    height: 30rem;
-    opacity: 0.5;
-  }
-  .lorem-ipsum-dolor-container {
-    position: absolute;
-    top: 3.21rem;
-    left: 0;
-    font-size: 1.06rem;
-    line-height: 1.97rem;
-    display: flex;
-    align-items: center;
-    width: 16.36rem;
-    height: 5.19rem;
-  }
-  .divelementor-image-box-conten {
-    position: absolute;
-    width: calc(100% - 80px);
-    top: 14.51rem;
-    right: 2.5rem;
-    left: 2.5rem;
-    height: 8.82rem;
-  }
- 
-  
-  .link {
-    top: 0;
-    left: 0;
-    background-color: #f5f7f9;
-    width: 25%;
-    height:3rem;
-  }
-  .divelementor-button-wrapper {
-    position: absolute;
-    top: 24.57rem;
-    right: 2.5rem;
-    left: 2.5rem;
-    text-align: center;
-    font-size:1rem;
-    background-color: red;
-    color: #000;
-  }
-  .divelementor-element1 {
-    position: absolute;
-    top: 0.63rem;
-    left: 0.63rem;
-    background-image: url(https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZmFzaGlvbiUyMG1vZGVsfGVufDB8fDB8fHww);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: top;
-  }
- 
-  
+.outer {
+	position: relative;
+	background: #fff;
+	height: 380px;
+	width: 430px;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+}
+.wrapper img {
+	position: absolute;
+	top: 0px;
+	right: -20px;
+	z-index: 0;
+	animation-delay: 0.5s;
+}
+
+.content {
+	animation-delay: 0.3s;
+	position: absolute;
+	left: 20px;
+	z-index: 3
+}
+
+h1 {
+	color: #111;
+}
+
+p {
+	width: 280px;
+	font-size: 13px;
+	line-height: 1.4;
+	color: #aaa;
+	margin: 20px 0;
+	
+}
+.bg {
+	display: inline-block;
+	color: #fff;
+	background: cornflowerblue;
+	padding: 5px 10px;
+	border-radius: 50px;
+	font-size: .7em;
+}
+.button {
+	width: fit-content;
+	height: fit-content;
+	margin-top: 10px;
+}
+
+.button a {
+	display: inline-block;
+	overflow: hidden;
+	position: relative;
+	font-size: 11px;
+	color: #111;
+	text-decoration: none;
+	padding: 10px 15px;
+	border: 1px solid #aaa;
+	font-weight: 500;
+}
+
+.button a:after{
+	content: "";
+	position: absolute;
+	top: 0;
+	right: -10px;
+	width: 0%;
+	background: #111;
+	height: 100%;
+	z-index: -1;
+	transition: width 0.3s ease-in-out;
+	transform: skew(-25deg);
+	transform-origin: right;
+}
+
+.button a:hover:after {
+	width: 150%;
+	left: -10px;
+	transform-origin: left;
+}
+
+.button a:hover {
+	color: #fff;
+	transition: all 0.5s ease;
+}
+
+
+.button a:nth-of-type(1) {
+	border-radius: 50px 0 0 50px;
+	border-right: none;
+}
+
+.button a:nth-of-type(2) {
+	border-radius: 0px 50px 50px 0;
+}
+
+.cart-icon {
+	padding-right: 8px;
+}
+
