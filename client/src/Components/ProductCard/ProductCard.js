@@ -1,23 +1,24 @@
 import React from 'react'
 import styles from './card.module.css'
-function ProductCard({productTitle,imgSrc,tagLine,price}) {
+function ProductCard({ productTitle, tagLine, price, backgroundImageUrl }) {
   return (
-    <>
-      <div className={styles.wrapper}>
-        <div className={styles.outer}>
-          <div className={styles.content}>
-            <span className={styles.bg}>EXCLUSIVE</span>
-            <h1>{productTitle}</h1>
-            <p>{tagLine}</p>
-            <div className={styles.button}>
-              <p>{price}INR</p><a className={styles["cart-btn"]} href="#"><i className={styles["cart-icon ion-bag"]}></i>ADD TO CART</a>
-            </div>
-          </div>
-          <img src={imgSrc} width="300px" className={styles.animated}/>
+    <section className={styles["divelementor-element1"]} style={{ backgroundImage: `url(${backgroundImageUrl})` }}>
+      <div className={styles["divelementor-image-box-conten"]}>
+        <b className={styles["heading-32"]}>{productTitle}</b>
+        <div className={styles["lorem-ipsum-dolor-container"]}>
+          <span className={styles["lorem-ipsum-dolor-container1"]}>
+            <p className={styles["lorem-ipsum-dolor"]}>{tagLine}</p>
+            <p className={styles["lorem-ipsum-dolor"]}>{price}</p>
+          </span>
         </div>
       </div>
-    </>
-  )
+      <div className={styles["divelementor-button-wrapper"]}>
+        <div className={styles.link2}>
+          <b className={styles["check-out"]}>Check Out</b>
+        </div>
+      </div>
+    </section>
+  );
 }
 
 export default ProductCard
