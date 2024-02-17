@@ -25,7 +25,7 @@ function HeroBanner() {
         <img style={{mixBlendMode:'multiply'}}
           class="image26-freepng-icon"
           alt=""
-          src='/assests/images/model.png'/>
+          src='/assets/images/model.png'/>
       </div>
     </div>
     </section>

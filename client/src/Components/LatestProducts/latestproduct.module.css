@@ -1,0 +1,36 @@
+
+  .product-column{
+    display: flex;
+  }
+  .product-details {
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+    color:white;
+    width: 350px;
+    background-color:  #312e39;
+  }
+  
+  .img {
+    aspect-ratio: 0.75;
+    object-fit: auto;
+    object-position: center;
+  }
+  
+  .product-name {
+    color:white;
+    margin-top: 21px;
+    font: 500 17px Fahkwang, sans-serif;
+  }
+  
+  .product-description {
+    font-weight: 400;
+    margin-top: 16px;
+  }
+  
+  .product-price {
+    font-weight: 500;
+    color: palevioletred;
+    margin-top: 11px;
+  }
+  

@@ -5,7 +5,7 @@ function SpecificProduct() {
         <main>
             <section className={styles["product-container"]}>
                 <div className={styles["product-image"]}>
-                    <img src='assests/images/undefined_image (32).png'/>
+                    <img src='assets/images/undefined_image (32).png'/>
                 </div>
                 <div className={styles["product-details"]}>
                     <h2>Product Name</h2>
