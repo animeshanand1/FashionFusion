@@ -52,7 +52,7 @@ function SpecificProduct() {
                         <div className={styles["quantity-value"]}>2</div>
                         <img loading="lazy" srcset="..." className={styles["quantity-image"]} />
                     </div>
-                    <div className={styles["add-to-cart-button"]}>Add to Cart</div>
+                    <img className={styles["add-to-cart-button"]} src='/assets/images/bag-shopping-svgrepo-com.svg'/>
                 </div>
             </div>
 

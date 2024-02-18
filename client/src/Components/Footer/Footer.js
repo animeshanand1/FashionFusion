@@ -8,7 +8,7 @@ function Footer() {
                     <div className={styles["div-logo-container"]}>
                         <img
                             loading="lazy"
-                            src=""
+                            src="/assets/images/main-logo.png"
                             className={styles.logo}
                         />
                         <div className={styles["companyName"]}>Fashion Fusion</div>

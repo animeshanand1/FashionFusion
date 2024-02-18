@@ -2,12 +2,16 @@
 .product-page{
   display: grid;
   grid-template-columns: 1fr 1.5fr;
+  gap: 1rem;
   background-color:#e2d6d6;
 }
 /* image gallery */
 .image-gallery {
   display: flex;
   align-items: flex-start;
+  border: 1px solid black;
+  padding: 0.4rem;
+  margin-left: 0.25rem;
 }
 
 .thumbnails {
@@ -33,9 +37,10 @@
 
 .product-details {
   display: flex;
+  border: 1px solid black;
   max-width: 400px;
   flex-direction: column;
-  padding: 0 20px;
+  padding: 1rem;
 }
 
 .product-title {
@@ -135,12 +140,10 @@
 }
 
 .add-to-cart-button {
-  font-family: Roboto, sans-serif;
   border-radius: 10px;
-  box-shadow: 0px 4px 4px 0px rgba(21, 101, 192, 0.1);
+  height: 50px;
+  cursor: pointer;
   background-color: #1565c0;
-  flex-grow: 1;
-  justify-content: center;
   color: #fff;
-  padding: 7px;
+  padding: 5px;
 }

@@ -50,8 +50,11 @@
     aspect-ratio: 1;
     object-fit: auto;
     object-position: center;
-    width: 30px;
-    fill: var(--Blue-Blue-70, #3a86ff);
+    width:50px;
+    height: 50px;
+    fill: red;
+    color: #3a86ff;
+   
   }
   .companyName {
     font-variant-numeric: lining-nums proportional-nums;

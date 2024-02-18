@@ -4,32 +4,31 @@ import { Link } from 'react-router-dom'
 function Topbar() {
   
   return (
-    <header className={styles.topbar}>
-      <div className={styles["link-frame"]}>
-        <div className={styles.logo}>
-          <img src='/assets/images/logo.svg' alt='logo' height='50px' width='40px'/>
-        </div>
-        <ul className={styles["about-link"]}>
-          <Link className={styles["nav-link"]}>Home</Link>
-          <Link className={styles["nav-link"]}>All Products</Link>
-          <Link className={styles["nav-link"]}>About</Link>
-          <Link className={styles["nav-link"]}>Contact</Link>
-          <Link className={styles["account-link"]} to='/account/login'> Account </Link>
-        </ul>        
-        <div className={styles["link-view-frame"]}>
-          <div className={styles.cart}>
-            <img
-              className={styles["link-view-shopping-cart-emp"]}
-              loading="eager"
-              alt=""
-              src='/assets/images/bag.svg' height='20px' width='20px'/>
-            <div className={styles["link-view-shopping-cart-number"]}>
-              <b className={styles["cart-frame"]}>0</b>
-            </div>
-          </div>
-        </div>
+    <header className={styles.navbar}>
+    <div className={styles["navbar-section"]}>
+      <div className={styles["navbar-logo"]}>
+        <div className={styles["navbar-home"]}>HOME</div>
+        <img
+          loading="lazy"
+          src="/assets/images/account-avatar-man-svgrepo-com.svg"
+          className={styles["navbar-logo-img"]}
+        />
       </div>
-    </header>
+      <div className={styles["navbar-category"]}>CATEGORY</div>
+      <div className={styles["navbar-featured"]}>FEATURED</div>
+      <div className={styles["navbar-new-arrivals"]}>NEW ARRIVALS</div>
+     
+    </div>
+    <div className={styles["navbar-search"]}>
+      <input type='text' className={styles["navbar-search-title"]} placeholder='search'/>
+      <img
+        loading="lazy"
+        src="/assets/images/account-avatar-man-svgrepo-com.svg"
+        className={styles["navbar-account"]}
+      />
+    </div>
+  </header>
+  
   )
 }
 
