@@ -1,7 +1,8 @@
 /* parent main */
 .product-page{
   display: grid;
-  background-color: red;
+  grid-template-columns: 1fr 1.5fr;
+  background-color:#e2d6d6;
 }
 /* image gallery */
 .image-gallery {
@@ -27,6 +28,7 @@
 
 .full-image {
   max-width: 400px;
+  max-height:600px;
 }
 
 .product-details {
