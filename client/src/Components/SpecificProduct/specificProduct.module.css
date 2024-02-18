@@ -1,6 +1,37 @@
+/* parent main */
+.product-page{
+  display: grid;
+  background-color: red;
+}
+/* image gallery */
+.image-gallery {
+  display: flex;
+  align-items: flex-start;
+}
+
+.thumbnails {
+  display: flex;
+  flex-direction: column;
+}
+
+.thumbnail {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.main-image {
+  margin-left: 20px;
+}
+
+.full-image {
+  max-width: 400px;
+}
+
 .product-details {
   display: flex;
-  max-width: 405px;
+  max-width: 400px;
   flex-direction: column;
   padding: 0 20px;
 }
