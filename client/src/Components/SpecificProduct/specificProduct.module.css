@@ -3,7 +3,7 @@
   display: grid;
   grid-template-columns: 1fr 1.5fr;
   gap: 1rem;
-  background-color:#e2d6d6;
+  background-color:#e6e4e4;
 }
 /* image gallery */
 .image-gallery {

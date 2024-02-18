@@ -1,166 +1,91 @@
-.container {
+.login-container {
+  background-color: #fff;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
-  min-height: 100vh;
 }
-.screen {
-  background: linear-gradient(90deg, #5d54a4, #7c78b8);
-  position: relative;
-  height: 400px;
-  width: 360px;
-  box-shadow: 0px 0px 24px #5c5696;
-}
-
-.screen-content {
-  z-index: 1;
-  position: relative;
-  height: 100%;
-}
-
-.screen-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 0;
-  -webkit-clip-path: inset(0 0 0 0);
-  clip-path: inset(0 0 0 0);
-}
-
-.screen-background-shape {
-  transform: rotate(45deg);
-  position: absolute;
-}
-
-.screen-background-shape1 {
-  height: 520px;
-  width: 520px;
-  background: #fff;
-  top: -50px;
-  right: 120px;
-  border-radius: 0 72px 0 0;
-}
-
-.screen-background-shape2 {
-  height: 220px;
-  width: 220px;
-  background: #6c63ac;
-  top: -172px;
-  right: 0;
-  border-radius: 32px;
-}
-
-.screen-background-shape3 {
-  height: 540px;
-  width: 190px;
-  background: linear-gradient(270deg, #5d54a4, #6a679e);
-  top: -24px;
-  right: 0;
-  border-radius: 32px;
-}
-
-.screen-background-shape4 {
-  height: 400px;
-  width: 200px;
-  background: #7e7bb9;
-  top: 420px;
-  right: 50px;
-  border-radius: 60px;
-}
-
-.login {
-  width: 320px;
-  padding: 30px;
-}
-
-.login-field {
-  padding: 20px 0px;
-  position: relative;
-}
-.login-icon {
-  position: absolute;
-  top: 30px;
-  color: #7875b5;
-}
-::placeholder {
-  color: wheat;
-}
-.login-input {
-  border: none;
-  border-bottom: 2px solid #d1d1d4;
-  background: none;
-  color: #fff;
-  padding: 10px;
-  padding-left: 24px;
-  font-weight: 700;
-  width: 75%;
-  transition: 0.2s;
-}
-.login-input:active,
-.login-input:focus,
-.login-input:hover {
-  outline: none;
-  border-bottom-color: pink;
-}
-.login-submit {
-  background: #fff;
-  font-size: 14px;
-  padding: 16px 20px;
-  border-radius: 26px;
-  border: 1px solid #d4d3e8;
-  text-transform: uppercase;
-  font-weight: 700;
-  text-align: center;
+.login-section {
+  background-color: #fff;
   width: 100%;
-  color: #4c489d;
-  box-shadow: 0px 2px 2px #5c5696;
-  cursor: pointer;
-  transition: 0.2s;
-}
-.login-submit:active,
-.login-submit:focus,
-.login-submit:hover {
-  border-color: #6a679e;
-  outline: none;
-}
-.button-icon {
-  font-size: 24px;
-  margin-left: auto;
-  color: #7875b5;
-}
-.social-login {
-  position: absolute;
-  height: 140px;
-  width: 160px;
-  text-align: center;
-  bottom: 0px;
-  right: 0px;
-  color: #fff;
-}
-.social-icons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding-right: 80px;
 }
 
-.social-login-icon {
-  padding: 20px 10px;
+.login-form {
+  gap: 10px;
+  display: flex;
+}
+
+.login-header {
+  display: flex;
+  flex-direction: column;
+  line-height: normal;
+  width: 66%;
+  margin-left: 0px;
+}
+
+.login-title {
+  font: 700 30px Jost, sans-serif;
+}
+
+.login-subtitle {
+  color: #a4a1aa;
+  margin-top: 5px;
+  font: 16px Jost, sans-serif;
+}
+
+.login-input {
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  color: #131118;
+  font-weight: 400;
+  margin: auto 0;
+}
+
+.login-label {
+  margin-top: 36px;
+  font: 12px Jost, sans-serif;
+}
+
+.login-email,.login-password  {
+  border-radius: 10px;
+  border: 1px solid #131118;
+  margin-top: 8px;
+  white-space: nowrap;
+  padding: 1.2rem;
+  font: 1rem, sans-serif;
+}
+
+
+.login-options {
+  display: flex;
+  margin-top: 16px;
+  width: 100%;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.login-remember {
+  display: flex;
+  gap: 10px;
+  font-size: 16px;
+  white-space: nowrap;
+}
+
+.login-remember-icon {
+  aspect-ratio: 1;
+  object-fit: auto;
+  object-position: center;
+  width: 20px;
+}
+.login-remember-text {
+  font-family:sans-serif;
+}
+
+.login-button {
+  border-radius: 10px;
+  background-color: #131118;
+  margin-top: 10px;
   color: #fff;
-  text-decoration: none;
-  text-shadow: 0px 0px 8px #7875b5;
-}
-.social-login-icon:hover {
-  transform: scale(1.5);
-}
-.login-icon[data-icon="user"] {
-  /* For username/email field */
-  font-family: "Font Awesome";
-  content: "\f007"; /* User icon code */
-}
-.login-icon[data-icon="lock"] {
-  /* For password field */
-  font-family: "Font Awesome";
-  content: "\f023"; /* Lock icon code */
+  padding: 1rem;
 }

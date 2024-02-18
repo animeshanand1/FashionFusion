@@ -33,8 +33,8 @@ function SpecificProduct() {
                 </div>
                 <div className={styles["price-and-discount"]}>
                     <div className={styles["price-info"]}>
-                        <div className={styles["currency-symbol"]}>$</div>
-                        <div className={styles["price-value"]}>67</div>
+                        <div className={styles["currency-symbol"]} style={{color:'orange'}}>&#x20B9;</div>
+                        <div className={styles["price-value"]}>1199</div>
                     </div>
                     <div className={styles["discount-info"]}>
                         <span className={styles["discount-label"]}>Save 25%</span>
