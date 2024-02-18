@@ -2,23 +2,39 @@ import React from 'react'
 import styles from './specificProduct.module.css'
 function SpecificProduct() {
     return (
-        <main>
-            <section className={styles["product-container"]}>
-                <div className={styles["product-image"]}>
-                    <img src='assets/images/undefined_image (32).png'/>
+        <main classNameName={styles["product-page"]}>
+           
+            <div className={styles["product-details"]}>
+                <div className={styles["product-title"]}>Plaid Sleeve Kangaroo Pocket Drawstring Hoodie</div>
+                <div className={styles["brand-info"]}>
+                    <span className={styles["brand-label"]}>by</span>
+                    <span className={styles["brand-name"]}>Cosmo Fashion</span>
                 </div>
-                <div className={styles["product-details"]}>
-                    <h2>Product Name</h2>
-                    <p className={styles.price}>Price</p>
-                    <p className={styles.description}> Introducing our stunning silver sequinned romper, 
-                    designed to make you shine at any occasion. This eye-catching outfit features a flattering 
-                    fit and dazzling sequins that catch the light with every move. The romper is crafted 
-                    with high-quality materials to ensure both comfort and style. Whether you're attending a 
-                    party, a night out with friends, or a special event, this romper will make you the 
-                    center of attention. Embrace your inner sparkle and step into the spotlight with our 
-                    fabulous silver sequinned romper.</p>
+                <div className={styles["price-and-discount"]}>
+                    <div className={styles["price-info"]}>
+                        <div className={styles["currency-symbol"]}>$</div>
+                        <div className={styles["price-value"]}>67</div>
+                    </div>
+                    <div className={styles["discount-info"]}>
+                        <span className={styles["discount-label"]}>Save 25%</span>
+                        <br />
+                        <span className={styles["discount-description"]}>Inclusive deal of the day</span>
+                    </div>
                 </div>
-            </section>
+                <div className={styles["product-description"]}>
+                    It is a long established fact that a reader will be distracted by the
+                    readable content of a page when looking at its layout.
+                </div>
+                <div className={styles["add-to-cart"]}>
+                    <div className={styles.quantity}>
+                        <div className={styles["quantity-label"]}>qty</div>
+                        <div className={styles["quantity-value"]}>2</div>
+                        <img loading="lazy" srcset="..." className={styles["quantity-image"]} />
+                    </div>
+                    <div className={styles["add-to-cart-button"]}>Add to Cart</div>
+                </div>
+            </div>
+
         </main>
     )
 }

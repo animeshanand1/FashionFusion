@@ -8,6 +8,7 @@ function AllLatestProducts() {
         <button style={{ float: 'right', marginTop: '-2rem', marginRight: '1.5rem', background: 'blue', border: 'none', color: 'white', padding: '10px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '0.8rem', borderRadius: '8px', boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.1)', transition: 'background 0.3s' }}>View All</button>
         <section className='latest-product-card container' style={{
             display: 'grid',
+            backgroundColor:'#b4712',
             gridTemplateColumns: 'repeat(3, 1fr)',
             width: '',
             padding: "1rem"
