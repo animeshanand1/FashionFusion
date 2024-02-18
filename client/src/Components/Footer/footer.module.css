@@ -1,0 +1,189 @@
+
+  .footerContainer {
+    background-color: var(--White-White-20, #f8f9fa);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    padding: 20px;
+  }
+  @media (max-width: 991px) {
+    .footerContainer {
+      padding: 0 20px;
+    }
+  }
+  .footerSection{
+    display: flex;
+    margin-top: 27px;
+    width: 100%;
+    max-width: 1232px;
+    align-items: start;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  @media (max-width: 991px) {
+    .footerSection{
+      max-width: 100%;
+      flex-wrap: wrap;
+    }
+  }
+  .logoSection{
+    display: flex;
+    flex-grow: 1;
+    flex-basis: 0%;
+    flex-direction: column;
+    color: var(--Black-Black-30, #77808b);
+    font-weight: 400;
+    line-height: 150%;
+  }
+  .div-logo-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 7px;
+    color: var(--Blue-Blue-70, #3a86ff);
+    font-weight: 700;
+    white-space: nowrap;
+    line-height: 137.5%;
+  }
+ 
+  .logo {
+    aspect-ratio: 1;
+    object-fit: auto;
+    object-position: center;
+    width: 30px;
+    fill: var(--Blue-Blue-70, #3a86ff);
+  }
+  .companyName {
+    font-variant-numeric: lining-nums proportional-nums;
+    font-family: Raleway, sans-serif;
+    align-self: start;
+    margin-top: 13px;
+    flex-grow: 1;
+    flex-basis: auto;
+  }
+  .contactInfo {
+    display: flex;
+    margin-top: 1rem;
+    gap: 1rem;
+  }
+  .contactIcon {
+    aspect-ratio: 1;
+    object-fit: auto;
+    object-position: center;
+    width: 24px;
+    align-self: start;
+  }
+ 
+  .contactInfoContainer {
+    display: flex;
+    margin-top: 27px;
+    justify-content: space-between;
+    gap: 16px;
+    white-space: nowrap;
+  }
+ 
+  
+  .web-email {
+    font-family: Roboto, sans-serif;
+    flex-grow: 1;
+  }
+  .div-phone {
+    display: flex;
+    margin-top: 24px;
+    justify-content: space-between;
+    gap: 16px;
+  }
+  .img{
+    aspect-ratio: 1;
+    object-fit: auto;
+    object-position: center;
+    width: 24px;
+  }
+  .phone-number {
+    font-family: Roboto, sans-serif;
+    flex-grow: 1;
+    flex-basis: auto;
+    margin: auto 0;
+  }
+
+  .companySection {
+    display: flex;
+    margin-top: 17px;
+    flex-basis: 0%;
+    flex-direction: column;
+  }
+  .sectionTitle {
+    color: var(--Blue-Blue-70, #3a86ff);
+    font-variant-numeric: lining-nums proportional-nums;
+    font-family: Raleway, sans-serif;
+    font-weight: 700;
+    
+  }
+  .navigationLinks {
+    color: #77808b;
+    font-family: Roboto, sans-serif;
+    margin-top: 1rem;
+    line-height: 1.5rem;
+  }
+  .social-media-conatiner{
+    display: flex;
+    margin-top: 16px;
+    flex-basis: 0%;
+    flex-direction: column;
+    white-space: nowrap;
+  }
+
+  .social-media-heading {
+    color: var(--Blue-Blue-70, #3a86ff);
+    font-variant-numeric: lining-nums proportional-nums;
+    font-family: Raleway, sans-serif;
+    font-weight: 700;
+    line-height: 137.5%;
+  }
+ 
+  .social-media-list {
+    color: #77808b;
+    font-family: Roboto, sans-serif;
+    line-height:1.5rem;
+    margin-top: 1rem;
+  }
+  .div-subscribe {
+    display: flex;
+    margin-top: 16px;
+    flex-grow: 1;
+    flex-basis: 0%;
+    flex-direction: column;
+    font-weight: 400;
+    line-height: 150%;
+  }
+  .div-subscribe-heading {
+   color: #3a86ff;
+    font-family: Raleway, sans-serif;
+    font-weight: 700;
+  }
+  
+  .subscriber-email {
+    font-family: Roboto, sans-serif;
+    border: 1px solid var(--Blue-Blue-50, #76aeff);
+    background-color: var(--Z-White-FFF, #fff);
+    margin-top: 15px;
+    justify-content: center;
+    align-items: start;
+    color: var(--Black-Black-10, #a2a9b0);
+    white-space: nowrap;
+    padding:10px;
+  }
+
+  .subscriber-email-send-btn {
+    border-radius: 4px;
+    background-color:#3a86ff;
+    justify-content: center;
+    color:white;
+    width:4rem;
+    margin-top: 3rem;
+    cursor: pointer;
+    white-space: nowrap;
+    padding: 10px;
+    font: 500 14px Roboto, sans-serif;
+  }
+ 
