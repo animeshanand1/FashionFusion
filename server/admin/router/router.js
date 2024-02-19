@@ -1,6 +1,7 @@
 
 const express=require('express')
 const { getLogin } = require("../model/controllers/authorization");
-const adminRouter = express.Router();
-adminRouter.use('/login', getLogin);
-module.exports=adminRouter
+const router = express.Router();
+
+router.post('/login',getLogin)
+module.exports=router

@@ -3,8 +3,6 @@ const adminRouter = require('./admin/router/router');
 const PORT=5000;
 require('./config/db');
 const app=express()
-const router = express.Router();
-app.use(router);
 
 app.use('/admin', adminRouter);
 
