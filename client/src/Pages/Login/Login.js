@@ -7,8 +7,9 @@ function Login() {
                 <div className={styles["login-section"]}>
                     <div className={styles["login-form"]}>
                         <div className={styles["login-header"]}>
-                            <div className={styles["login-title"]}>Welcome</div>
-                            <div className={styles["login-subtitle"]}>Please login here</div>
+                            
+                            <img src='/assets/images/undefined_image (32).png' style={{width:'600px'}}/>
+                           
                         </div>
                         <form className={styles["login-input"]}>
                             <label className={styles["login-label"]}>Email Address</label>
