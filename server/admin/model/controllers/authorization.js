@@ -18,6 +18,17 @@ const getLogin=async(req,res)=>{
 
 
 const registerAdmin=async(req,res)=>{
-    
+    const {email,password}=req.body;
+    try {
+        const admin=await Admin.create({
+            password:password,
+            email:email
+        })
+        await admin.save()
+        res.status(201).json({message:'admin created successfully'})
+    } catch (error) {
+        console.error(error)
+        res.status(400).json({message:'eroor'})
+    }
 }
-module.exports={getLogin}
+module.exports={getLogin,registerAdmin}
