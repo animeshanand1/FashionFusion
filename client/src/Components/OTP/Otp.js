@@ -7,10 +7,10 @@ function Otp() {
             <h4>Enter OTP Code</h4>
             <form>
                 <div className={styles["input-field"]}>
-                    <input type="number" className={styles["otp-input"]} />
-                    <input type="number" className={styles["otp-input"]} disabled />
-                    <input type="number" className={styles["otp-input"]} disabled />
-                    <input type="number" className={styles["otp-input"]} disabled />
+                    <input type="text" className={styles["otp-input"]} maxLength='1'/>
+                    <input type="text" className={styles["otp-input"]} disabled  maxLength='1'/>
+                    <input type="text" className={styles["otp-input"]} disabled  maxLength='1'/>
+                    <input type="text" className={styles["otp-input"]} disabled   maxLength='1'/>
                 </div>
             </form>
             <button className={styles["verify-btn"]}>Verify OTP</button>
