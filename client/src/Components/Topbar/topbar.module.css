@@ -8,6 +8,7 @@
     padding-bottom: 0.5rem;
     cursor: pointer;
   }
+  
 .navbar-account{
   height: 40px;
   width: auto;
@@ -23,6 +24,7 @@
     font-weight: 500;
     padding: 0 20px;
   }
+  
   @media (max-width: 991px) {
     .navbar-section {
       max-width: 100%;
@@ -62,6 +64,7 @@
     flex-grow: 1;
     flex-basis: auto;
   }
+  
   .navbar-featured {
     font-family: Montserrat, sans-serif;
   }
