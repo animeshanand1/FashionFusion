@@ -12,12 +12,12 @@ const userLogin = async (req, res) => {
         }
         const matchedPassword=await bcrypt.compare(password,isUser.password)
         if(matchedPassword){
-            res.status(200).json({ message: 'Signed In' })
+            return res.status(200).json({ message: 'Signed In' })
         }
         return res.status(401).json({ message: 'Bad Credentials' });
     } catch (error) {
         console.error(error)
-        res.status(401).json({ message: 'Something went wrong' })
+        return res.status(500).json({ message: 'Something went wrong' });
     }
 }
 
