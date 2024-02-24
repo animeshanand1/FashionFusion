@@ -1,6 +1,9 @@
 const mongoose = require('mongoose')
 const User = require('../model/userSchema')
 const bcrypt=require('bcrypt')
+const jwt = require('jsonwebtoken');
+const secretKey = process.env.SECRET_KEY;
+
 
 const userLogin = async (req, res) => {
     try {
@@ -8,11 +11,11 @@ const userLogin = async (req, res) => {
         const isUser = await User.findOne({ email })
         if (!isUser) {
             return res.status(401).json({ message: 'Kindly register first' });
-    
         }
         const matchedPassword=await bcrypt.compare(password,isUser.password)
         if(matchedPassword){
-            return res.status(200).json({ message: 'Signed In' })
+            const token = jwt.sign({ userId: isUser._id }, 'asaas', { expiresIn: '2h' });
+            return res.status(200).json({ message: 'Signed In',token })
         }
         return res.status(401).json({ message: 'Bad Credentials' });
     } catch (error) {
