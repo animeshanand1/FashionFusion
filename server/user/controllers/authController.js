@@ -7,7 +7,8 @@ const userLogin = async (req, res) => {
         const { email, password } = req.body
         const isUser = await User.findOne({ email })
         if (!isUser) {
-            res.send('Kindly register first')
+            return res.status(401).json({ message: 'Kindly register first' });
+    
         }
         const matchedPassword=await bcrypt.compare(password,isUser.password)
         if(matchedPassword){
