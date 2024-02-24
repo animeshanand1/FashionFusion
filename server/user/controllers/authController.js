@@ -1,5 +1,6 @@
 const mongoose = require('mongoose')
 const User = require('../model/userSchema')
+const bcrypt=require('bcrypt')
 
 const userLogin = async (req, res) => {
     try {
@@ -29,7 +30,8 @@ const userSignup = async (req, res) => {
         if (existingUser) {
             return res.status(400).json({ message: 'Email already exists' });
         }
-        const newUser = await User.create({name,password,email})
+        const hashedPassword=await bcrypt.hash(password,10)
+        const newUser = await User.create({name,password:hashedPassword,email})
 
         res.status(201).json({ message: 'created account', newUser })
 
