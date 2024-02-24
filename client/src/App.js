@@ -5,6 +5,7 @@ import SpecificProduct from './Components/SpecificProduct/SpecificProduct';
 import Topbar from './Components/Topbar/Topbar';
 import Footer from './Components/Footer/Footer';
 import Otp from './Components/OTP/Otp';
+import Signup from './Pages/Signup/Signup';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
     <div className="App">
       <Routes>
         <Route path="/account/login" element={<Login />} />
+        <Route path="/account/signup" element={<Signup />} />
         <Route path="/" element={<Homepage/>} />
         <Route path="/verify-otp" element={<Otp/>} />
         <Route path="/product" element={[<Topbar/>,<SpecificProduct/>,<Footer/>]} />
