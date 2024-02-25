@@ -6,6 +6,7 @@ import Topbar from './Components/Topbar/Topbar';
 import Footer from './Components/Footer/Footer';
 import Otp from './Components/OTP/Otp';
 import Signup from './Pages/Signup/Signup';
+import Account from './Pages/Account/Account';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
     <div className="App">
       <Routes>
         <Route path="/account/login" element={<Login />} />
+        <Route path="/account/update" element={<Account />} />
         <Route path="/account/signup" element={<Signup />} />
         <Route path="/" element={<Homepage/>} />
         <Route path="/verify-otp" element={<Otp/>} />

@@ -41,8 +41,7 @@ function Signup() {
       [name]: value
     });
   };
-  console.log('f',formData);
-
+ 
   return (
     <div className={styles.container}>
       <div className={styles.title}>Registration</div>
@@ -91,7 +90,8 @@ function Signup() {
             </div>
           </div>
           <div className={styles.button}>
-            <input type="submit" value="Register" />
+            <button type="submit" className={styles.register}>Register</button>
+            <button onClick={()=>{navigate('/account/login')}} className={styles.login}>Login</button>
           </div>
         </form>
       </div>
