@@ -16,7 +16,7 @@ function App() {
       <Routes>
         <Route path="/account/login" element={<Login />} />
         <Route path="/account/my-account" element={<Account />} />
-        <Route path="/cart" element={<Mycart />} />
+        <Route path="/cart" element={[<Mycart />,<Footer/>]}/>
         <Route path="/account/signup" element={<Signup />} />
         <Route path="/" element={<Homepage/>} />
         <Route path="/verify-otp" element={<Otp/>} />

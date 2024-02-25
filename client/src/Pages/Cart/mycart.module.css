@@ -1,90 +1,52 @@
-
-.div-18,
-.div-39 {
-  font-family: Poppins, sans-serif;
-}
-.img-3,
-.img-6 {
-  width: 20px;
-}
-.div-17 {
-  justify-content: space-between;
-  font-size: 14px;
-  text-align: right;
-}
-.img-10,
-.img-4 {
-  width: 25px;
-}
-.card-container {
-  display: flex;
-  flex-direction: column;
-  line-height: normal;
-  width: 38%;
-  margin-left: 20px;
-}
-.div-37 {
-  border-radius: 20px;
-  background-color: #565abb;
-  display: flex;
+.summary-wrapper{
+  background-color: rgb(235, 226, 226);
+  display: grid;
+  height: 100vh;
   width: 100%;
-  flex-grow: 1;
-  flex-direction: column;
-  font-weight: 500;
-  margin: 0 auto;
-  padding: 20px 19px;
+  grid-template-columns:1fr 0.5fr;
+
 }
-.div-38 {
-  justify-content: space-between;
-  font-size: 22px;
+.cart-component{
+  margin-left: 10px;
+}
+.payment-card-container{
+  color: white;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+input{
+  outline: none !important;
+  border: 2px solid white !important;
+  color: white !important;
+}
+.card-background {
+  border-radius:10px;
+  background-color: #565abb;
+  flex-direction: column;
+  padding: 20px;
+}
+.card-detail-tag{
   font-weight: 600;
 }
-.div-39 {
-  flex-grow: 1;
-  flex-basis: auto;
-  margin: auto 0;
+.card-detailed-info{
+  display: grid;
+  grid-template-columns:1fr;
 }
-.img-11 {
-  width: 50px;
+::placeholder{
+  color:greenyellow;
+  font-size: 15px;
+  font-weight: 600;
 }
-.div-40 {
-  margin-top: 20px;
-  font: 16px Nunito, sans-serif;
-}
-.div-41 {
-  display: flex;
-  margin-top: 17px;
-  justify-content: space-between;
-  gap: 16px;
-  font-size: 14px;
-  font-weight: 700;
-  white-space: nowrap;
-  text-align: center;
-}
-.img-12,
-.img-13,
-.img-14 {
-  object-fit: auto;
-  object-position: center;
-  width: 75px;
-}
-.div-42 {
-  border-radius: 5px;
-  background-color: rgba(217, 217, 217, 0.2);
-  flex-grow: 1;
-  justify-content: center;
-  padding:10px;
-}
-.div-44,
-.div-46 {
+.card-name-input,
+.card-num-input {
   border-radius: 6px;
   background-color: #6268c6;
 }
-.div-43 {
+.card-name-label {
   margin-top: 32px;
   font: 14px Poppins, sans-serif;
 }
-.div-44 {
+.card-name-input {
   margin-top: 11px;
   justify-content: center;
   align-items: start;
@@ -93,108 +55,79 @@
   padding: 16px 60px 16px 18px;
   font: 12px Poppins, sans-serif;
 }
-.div-45 {
+.card-num-label {
   color: #fefcfc;
   margin-top: 19px;
   font: 14px Poppins, sans-serif;
 }
-.div-46 {
+.card-num-input {
   margin-top: 9px;
   justify-content: center;
   align-items: start;
   color: #c4c4c4;
-  padding: 16px 60px 16px 18px;
+  padding: 16px;
   font: 12px Poppins, sans-serif;
 }
-.div-47,
-.div-64 {
+.card-validity,
+.checkout-container {
   justify-content: space-between;
 }
-.div-47 {
+.card-validity {
   display: flex;
   margin-top: 18px;
   gap: 8px;
 }
-.div-48 {
+.card-exp {
   display: flex;
   flex-grow: 1;
   flex-basis: 0%;
   flex-direction: column;
 }
-.div-49,
-.div-52 {
-  color: #fefcfc;
-  font: 14px Poppins, sans-serif;
-}
-.div-50,
-.div-53 {
+
+.exp-input,
+.cvv-input {
   border-radius: 6px;
   background-color: #6268c6;
   color: #c4c4c4;
   font: 12px Poppins, sans-serif;
 }
-.div-50 {
-  margin-top: 6px;
-  justify-content: center;
-  align-items: start;
-  white-space: nowrap;
-  padding: 13px 60px 13px 18px;
+.exp-input {
+  padding: 15px;
 }
-.div-51 {
-  align-self: start;
+.card-cvv {
   display: flex;
-  flex-grow: 1;
-  flex-basis: 0%;
   flex-direction: column;
-  white-space: nowrap;
 }
-.div-53 {
-  margin-top: 10px;
-  justify-content: center;
-  align-items: start;
-  padding: 16px;
+.cvv-input {
+  padding: 14px;
 }
-.div-55,
-.div-64 {
+.checkout-info,
+.checkout-container {
   color: #fefcfc;
   display: flex;
 }
 
-.div-54 {
+.separator-line {
   background-color:white;
   margin-top:10px;
   height: 4px;
 }
-.div-55 {
+.price-label-col,.price-amount-col{
+  display: flex;
+  flex-direction: column;
+}
+.checkout-info {
   margin-top: 10px;
   align-items: start;
   justify-content: space-between;
 }
-.div-58 {
-  margin-top: 16px;
-}
-.div-59 {
-  margin-top: 10px;
-}
-.div-60 {
-  display: flex;
-  flex-direction: column;
-  white-space: nowrap;
+.price-amount-col {
   text-align: right;
 }
-.div-62 {
-  margin-top: 10px;
-}
-.div-63 {
-  margin-top: 10px;
-}
-.div-64 {
-  border-radius: 12px;
+.checkout-container {
+  border-radius: 10px;
   background-color: #4de1c1;
   margin-top: 10px;
   padding: 10px;
 }
 
-.div-67 {
-  flex-grow: 1;
-}

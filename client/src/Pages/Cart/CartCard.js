@@ -5,10 +5,6 @@ function CartCard() {
   return (
     <div className={styles.savedCart}>
       <div className={styles[""]}>
-        <div className={styles[""]}>
-          <div className={styles["continue"]}>Shopping Continue</div>
-        </div>
-        <div className={styles["item-number"]}>You have 3 item in your cart</div>
         <div className={styles["cart-box"]}>
           <div className={styles["box-deatils"]}>
             <img
