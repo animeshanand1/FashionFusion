@@ -1,56 +1,12 @@
 import React from 'react'
 import styles from './mycart.module.css'
+import CartCard from './CartCard'
 
 function Mycart() {
     return (
         <div className={styles.cartMain}>
             <div className={styles["div-2"]}>
-                <div className={styles.column}>
-                    <div className={styles["div-3"]}>
-                        <div className={styles["div-4"]}>
-                            <img
-                                loading="lazy"
-                                srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/07c8c97aac2e655d08e7476bbc5cfb574607d25f8a0c7804f637bc4078c31e1e?apiKey=efcdc6923779477789211f52a6096958&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/07c8c97aac2e655d08e7476bbc5cfb574607d25f8a0c7804f637bc4078c31e1e?apiKey=efcdc6923779477789211f52a6096958&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/07c8c97aac2e655d08e7476bbc5cfb574607d25f8a0c7804f637bc4078c31e1e?apiKey=efcdc6923779477789211f52a6096958&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/07c8c97aac2e655d08e7476bbc5cfb574607d25f8a0c7804f637bc4078c31e1e?apiKey=efcdc6923779477789211f52a6096958&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/07c8c97aac2e655d08e7476bbc5cfb574607d25f8a0c7804f637bc4078c31e1e?apiKey=efcdc6923779477789211f52a6096958&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/07c8c97aac2e655d08e7476bbc5cfb574607d25f8a0c7804f637bc4078c31e1e?apiKey=efcdc6923779477789211f52a6096958&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/07c8c97aac2e655d08e7476bbc5cfb574607d25f8a0c7804f637bc4078c31e1e?apiKey=efcdc6923779477789211f52a6096958&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/07c8c97aac2e655d08e7476bbc5cfb574607d25f8a0c7804f637bc4078c31e1e?apiKey=efcdc6923779477789211f52a6096958&"
-                                className={styles.img}
-                            />
-                            <div className={styles["div-5"]}>Shopping Continue</div>
-                        </div>
-                        <div className={styles["div-6"]}>
-                            <div className={styles["div-8"]}>Shopping cart</div>
-                            <div className={styles["div-9"]}>You have 3 item in your cart</div>
-                            <div className={styles["div-10"]}>
-                                <div className={styles["div-11"]}>
-                                    <img
-                                        loading="lazy"
-                                        srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/5c4ddcc93426454c14f08fbf6d2b8a698c574dff01b53b8f4e41e0c08fb873f8?apiKey=efcdc6923779477789211f52a6096958&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/5c4ddcc93426454c14f08fbf6d2b8a698c574dff01b53b8f4e41e0c08fb873f8?apiKey=efcdc6923779477789211f52a6096958&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/5c4ddcc93426454c14f08fbf6d2b8a698c574dff01b53b8f4e41e0c08fb873f8?apiKey=efcdc6923779477789211f52a6096958&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/5c4ddcc93426454c14f08fbf6d2b8a698c574dff01b53b8f4e41e0c08fb873f8?apiKey=efcdc6923779477789211f52a6096958&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/5c4ddcc93426454c14f08fbf6d2b8a698c574dff01b53b8f4e41e0c08fb873f8?apiKey=efcdc6923779477789211f52a6096958&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/5c4ddcc93426454c14f08fbf6d2b8a698c574dff01b53b8f4e41e0c08fb873f8?apiKey=efcdc6923779477789211f52a6096958&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/5c4ddcc93426454c14f08fbf6d2b8a698c574dff01b53b8f4e41e0c08fb873f8?apiKey=efcdc6923779477789211f52a6096958&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/5c4ddcc93426454c14f08fbf6d2b8a698c574dff01b53b8f4e41e0c08fb873f8?apiKey=efcdc6923779477789211f52a6096958&"
-                                        className={styles["img-2"]}
-                                    />
-                                    <div className={styles["div-12"]}>
-                                        <div className={styles["div-13"]}>Italy Pizza</div>
-                                        <div className={styles["div-14"]}>Extra cheese and toping</div>
-                                    </div>
-                                </div>
-                                <div className={styles["div-15"]}>
-                                    <div className={styles["div-16"]}>1</div>
-                                    <img
-                                        loading="lazy"
-                                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/e2396ede0fb30a9a73553193bae56bb69da86c35bafd2db9e77fb30086f8055c?apiKey=efcdc6923779477789211f52a6096958&"
-                                        className={styles["img-3"]}
-                                    />
-                                </div>
-                                <div className={styles["div-17"]}>
-                                    <div className={styles["div-18"]}>$681</div>
-                                    <img
-                                        loading="lazy"
-                                        srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/ca7184ea62775f5783eee0dec6ff7b21605cadad8484fbcf0590842f4020fa06?apiKey=efcdc6923779477789211f52a6096958&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/ca7184ea62775f5783eee0dec6ff7b21605cadad8484fbcf0590842f4020fa06?apiKey=efcdc6923779477789211f52a6096958&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/ca7184ea62775f5783eee0dec6ff7b21605cadad8484fbcf0590842f4020fa06?apiKey=efcdc6923779477789211f52a6096958&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/ca7184ea62775f5783eee0dec6ff7b21605cadad8484fbcf0590842f4020fa06?apiKey=efcdc6923779477789211f52a6096958&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/ca7184ea62775f5783eee0dec6ff7b21605cadad8484fbcf0590842f4020fa06?apiKey=efcdc6923779477789211f52a6096958&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/ca7184ea62775f5783eee0dec6ff7b21605cadad8484fbcf0590842f4020fa06?apiKey=efcdc6923779477789211f52a6096958&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/ca7184ea62775f5783eee0dec6ff7b21605cadad8484fbcf0590842f4020fa06?apiKey=efcdc6923779477789211f52a6096958&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/ca7184ea62775f5783eee0dec6ff7b21605cadad8484fbcf0590842f4020fa06?apiKey=efcdc6923779477789211f52a6096958&"
-                                        className={styles["img-4"]}
-                                    />
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
+              <CartCard/>
                 <div className={styles["card-container"]}>
                     <div className={styles["div-37"]}>
                         <div className={styles["div-38"]}>
