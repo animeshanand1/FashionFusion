@@ -1,9 +1,13 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 
 
 function Account() {
     const [image, setImage] = useState(null);
+    useEffect(()=>{
+      const response=axios.get('http://localhost:5000/user/fetch-user/65db01b360f56e96dd3b5cd0')
+      console.log('response',response);
+    },[])
 
     const handleImageChange = (event) => {
       const selectedImage = event.target.files[0];
