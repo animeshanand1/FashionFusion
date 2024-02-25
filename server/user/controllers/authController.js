@@ -26,26 +26,34 @@ const userLogin = async (req, res) => {
 
 const userSignup = async (req, res) => {
     try {
-        const { name, password, email } = req.body
+        const { firstName, lastName, password, email, confirmPassword, phone } = req.body;
+        if (phone.toString().length !== 10) {
+            return res.status(401).json({ message: 'Invalid Phone Number' });
+        }
         const existingUser = await User.findOne({ email });
         if (existingUser) {
             return res.status(400).json({ message: 'Email already exists' });
         }
-        const hashedPassword=await bcrypt.hash(password,10)
-        const newUser = await User.create({name,password:hashedPassword,email})
+        if (password !== confirmPassword) {
+            return res.status(400).json({ message: 'Passwords do not match' });
+        }
 
-        res.status(201).json({ message: 'created account', newUser })
+        const hashedPassword = await bcrypt.hash(password, 10);
+        const newUser = await User.create({ firstName, lastName, password: hashedPassword, email, phone });
 
+        res.status(201).json({ message: 'Account created successfully', newUser });
     } catch (error) {
-        console.error(error)
-        res.status(500).json({ message: 'Something went wrong' })
+        console.error(error);
+        res.status(500).json({ message: 'Something went wrong' });
     }
-}
+};
+
 
 const updateUser=async(req,res)=>{
     try {
         const {id}=req.params
         const {name}=req.body
+        const {photo}=req.body
         const user=await User.findById(id)
         if (!user) {
             return res.status(404).json({ message: 'User not found' });
