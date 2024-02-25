@@ -52,14 +52,15 @@ const userSignup = async (req, res) => {
 const updateUser=async(req,res)=>{
     try {
         const {id}=req.params
-        const {name}=req.body
-        const {photo}=req.body
+        const {image}=req.body
+        console.log(req.body.image,'rwe');
         const user=await User.findById(id)
         if (!user) {
             return res.status(404).json({ message: 'User not found' });
         }
         
-        user.name =name;
+        user.image =image;
+       
         await user.save();
         return res.status(201).json({ message: 'User updated successfully', User });
     } catch (error) {

@@ -24,7 +24,7 @@ const userSchema=new mongoose.Schema({
     confirmPassword:{
         type: String,
     },
-    photo:{
+    image:{
         type:String
     }
 })

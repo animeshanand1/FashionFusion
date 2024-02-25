@@ -8,11 +8,6 @@
     padding-bottom: 0.5rem;
     cursor: pointer;
   }
-  
-.navbar-account{
-  height: 40px;
-  width: auto;
-}
 
   .navbar-section {
     align-self: start;

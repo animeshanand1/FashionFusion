@@ -50,7 +50,7 @@ const accountStyles = {
   },
   tooltip: {
     position: 'absolute',
-    top: '-7.0%',
+    top: '-5.0%',
     right: '1.5%',
     width: 0,
     height: 0,
@@ -60,7 +60,7 @@ const accountStyles = {
   },
 };
 const token = sessionStorage.getItem('token');
-console.log('before-logout', token);
+// console.log('before-logout', token);
 
 const logoutBtn = () => {
   alert('Are you sure you want to log out?');
@@ -68,7 +68,7 @@ const logoutBtn = () => {
   navigate('/account/login')
 };
 
-console.log('after-logout', token);
+// console.log('after-logout', token);
 const handleAccount = () => {
   if (!isClicked) {
     setIsClicked(true)
@@ -95,12 +95,20 @@ return (
     </div>
     <div className={styles["navbar-search"]}>
       <input type='text' className={styles["navbar-search-title"]} placeholder='search' />
+      {userData ?
       <img
         loading="lazy"
-        src="/assets/images/account-avatar-man-svgrepo-com.svg"
+        src={userData.image}
         className={styles["navbar-account"]}
         onClick={handleAccount}
-      />
+        style={{borderRadius:'50%',height:'40px',width:'40px'}}
+      /> : <img
+      loading="lazy"
+      src="/assets/images/account-avatar-man-svgrepo-com.svg"
+      className={styles["navbar-account"]}
+      onClick={handleAccount}
+    />
+      }
     </div>
     {/* topbar account options */}
     <div style={accountStyles.accountInfo} >
@@ -108,7 +116,7 @@ return (
         <p style={{ color: 'darkblue',fontSize:'14px' }}> Welcome {userData ? userData.firstName :'guest'}</p>
         <div style={accountStyles.row}>
           <div style={accountStyles.btn} onClick={logoutBtn}>Logout<div style={accountStyles.line}></div></div>
-          <div style={accountStyles.btn}>Account<div style={accountStyles.line}></div></div>
+          <div style={accountStyles.btn} onClick={()=>navigate('/account/my-account')}>Account<div style={accountStyles.line}></div></div>
           <div style={accountStyles.btn}>My Cart<div style={accountStyles.line}></div></div>
         </div>
         <div style={accountStyles.tooltip}></div>
