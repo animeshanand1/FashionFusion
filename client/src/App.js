@@ -7,6 +7,7 @@ import Footer from './Components/Footer/Footer';
 import Otp from './Components/OTP/Otp';
 import Signup from './Pages/Signup/Signup';
 import Account from './Pages/Account/Account';
+import Mycart from './Pages/Cart/Mycart';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Routes>
         <Route path="/account/login" element={<Login />} />
         <Route path="/account/my-account" element={<Account />} />
+        <Route path="/cart" element={<Mycart />} />
         <Route path="/account/signup" element={<Signup />} />
         <Route path="/" element={<Homepage/>} />
         <Route path="/verify-otp" element={<Otp/>} />
