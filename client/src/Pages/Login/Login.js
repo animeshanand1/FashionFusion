@@ -25,32 +25,27 @@ function Login() {
     }
     return (
         <>
-            <section className={styles["login-container"]}>
-                <div className={styles["login-section"]}>
-                    <div className={styles["login-form"]}>
-                        <div className={styles["login-header"]}>
-                            <img src='/assets/images/undefined_image (32).png' style={{ width: '600px' }} />
-
-                        </div>
-                        <form className={styles["login-input"]} onSubmit={handleSubmit}>
-                            <label className={styles["login-label"]}>Email Address</label>
-                            <input type='email' className={styles["login-email"]} value={email} onChange={(e) => setEmail(e.target.value)} />
-                            <label className={styles["login-label"]}>Password</label>
-                            <input className={styles["login-password"]} type='password' value={password} onChange={(e) => setPassword(e.target.value)} />
-                            <div className={styles["login-options"]}>
-                                <div className={styles["login-remember"]}>
-                                    <img loading="lazy" src="" className={styles["login-remember-icon"]} />
-                                    <div className={styles["login-remember-text"]}>Remember Me</div>
-                                </div>
-                                <div className={styles["login-forgot"]}>Forgot Password?
-                                <button className={styles["login-button"]} onClick={()=>{navigate('/account/signup')}}>Don't have an account?Signup</button></div>
+            <div className={styles.container}>
+                <div className={styles.title}>Login</div>
+                <div className={styles.content}>
+                    <form onSubmit={handleSubmit}>
+                        <div className={styles["user-details"]}>
+                            <div className={styles["input-box"]}>
+                                <label className={styles.details}>Email</label>
+                                <input type="text" name="email" placeholder="Enter your email" required value={email} onChange={(e) => setEmail(e.target.value)} />
                             </div>
-                            <button className={styles["login-button"]}>Login</button>
-                        </form>
-                      
-                    </div>
+                            <div className={styles["input-box"]}>
+                                <label className={styles.details}>Password</label>
+                                <input type="password" name="password" placeholder="Enter your password" required value={password} onChange={(e) => setPassword(e.target.value)} />
+                            </div>
+                        </div>
+                        <div className={styles.button}>
+                            <button type="submit" className={styles.login}>Login</button>
+                            <button onClick={() => { navigate('/account/signup') }} className={styles.register}>Register</button>
+                        </div>
+                    </form>
                 </div>
-            </section>
+            </div>
         </>
     )
 }

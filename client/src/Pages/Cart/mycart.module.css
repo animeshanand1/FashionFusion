@@ -14,7 +14,7 @@
   margin-top: 10px;
   margin-right: 10px;
 }
-input{
+.cartMain input{
   outline: none !important;
   border: 2px solid white !important;
   color: white !important;
@@ -32,7 +32,7 @@ input{
   display: grid;
   grid-template-columns:1fr;
 }
-::placeholder{
+.cartMain ::placeholder{
   color:greenyellow;
   font-size: 15px;
   font-weight: 600;
