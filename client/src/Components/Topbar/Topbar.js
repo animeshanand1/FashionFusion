@@ -107,6 +107,7 @@ return (
       src="/assets/images/account-avatar-man-svgrepo-com.svg"
       className={styles["navbar-account"]}
       onClick={handleAccount}
+      style={{borderRadius:'50%',height:'40px',width:'40px'}}
     />
       }
     </div>
