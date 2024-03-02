@@ -1,13 +1,15 @@
 import React, { useState } from 'react'
 import styles from './login.module.css'
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom'
+
 function AdminLogin() {
     const [formData,setFormData]=useState({
-        role:'Admin',
+        role:'admin',
         email:'',
         password:''
     })
-
+    const navigate=useNavigate('')
     const handleSubmit=async(e)=>{
         e.preventDefault();
         const {email,role,password}=formData;
@@ -15,7 +17,7 @@ function AdminLogin() {
            const response= await axios.post('http://localhost:5000/admin/login',{
             email,password,role
            })
-         
+           navigate('/admin/dashboard')
         } catch (error) {
             console.error('err',error)
             alert('Validation Failed');
