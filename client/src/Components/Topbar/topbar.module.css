@@ -26,13 +26,15 @@
   }
   .my-cart-items {
     position: absolute;
-  top: -5px;
-  right: -9px;
+  top: -12px;
+  right: -11px;
   background-color:rgb(255, 115, 0);
   color: #fff;
   border-radius: 50%;
-  padding: 3px 6px;
+  padding: 5px 6px;
   font-size: 12px;
+  font-weight: 700;
+  font-family: serif;
 }
   @media (max-width: 991px) {
     .navbar-section {
