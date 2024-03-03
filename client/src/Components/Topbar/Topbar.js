@@ -2,12 +2,17 @@ import React, { useEffect, useState } from 'react'
 import styles from './topbar.module.css'
 import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios'
+import { useSelector } from 'react-redux';
+import { addToCart, clearCart, removefromCart } from '../../redux/slices/cartSlice';
 
 
 
 function Topbar() {
   const [isClicked, setIsClicked] = useState(false);
   const [userData, setUserData] = useState(null);
+  const totalAddedItems=useSelector( (state)=>state.cart.totalItems)
+  console.log(totalAddedItems,'x');
+  
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -67,7 +72,9 @@ const logoutBtn = () => {
   sessionStorage.removeItem('token');
   navigate('/account/login')
 };
-
+const handleBagClick=()=>{
+  navigate('/cart')
+}
 // console.log('after-logout', token);
 const handleAccount = () => {
   if (!isClicked) {
@@ -95,6 +102,10 @@ return (
     </div>
     <div className={styles["navbar-search"]}>
       <input type='text' className={styles["navbar-search-title"]} placeholder='search' />
+      <div className={styles['my-cart-img-div']}>
+        <img src='/assets/images/bag-shopping-svgrepo-com.svg' height='32px' width='32px' onClick={handleBagClick}/>
+        <span className={styles['my-cart-items']}>{totalAddedItems}</span>
+      </div>
       {userData ?
       <img
         loading="lazy"
@@ -110,6 +121,7 @@ return (
       style={{borderRadius:'50%',height:'40px',width:'40px'}}
     />
       }
+     
     </div>
     {/* topbar account options */}
     <div style={accountStyles.accountInfo} >
