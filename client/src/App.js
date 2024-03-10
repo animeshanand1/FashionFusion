@@ -9,6 +9,7 @@ import Signup from './Pages/Signup/Signup';
 import Account from './Pages/Account/Account';
 import Mycart from './Pages/Cart/Mycart';
 import AdminLogin from './Components/Admin/Login';
+import Dashboard from './Components/Admin/Dashboard';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/verify-otp" element={<Otp/>} />
         <Route path="/product" element={[<Topbar/>,<SpecificProduct/>,<Footer/>]} />
         <Route path="/admin/login" element={[<AdminLogin/>]} />
+        <Route path="/admin/dashboard" element={[<Dashboard/>]} />
       </Routes>
     </div>
   </Router>
