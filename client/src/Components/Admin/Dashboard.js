@@ -1,6 +1,13 @@
 import React from 'react'
 import styles from './dashboard.module.css'
 import { Link } from 'react-router-dom'
+import TableComponent from './components/Table';
+
+const data = [
+  {productName:'Kurti' ,sales: 100, revenue: 1000, percentageChange: '+10%', category: "Women's Clothing" },
+  { productName:'Shirts',sales: 200, revenue: 2000, percentageChange: '+20%', category: "kid's Clothing"  },
+  {productName:'Jacket', sales: 300, revenue: 3000, percentageChange: '+30%', category: "Women's Clothing"  },
+];
 function Dashboard() {
   return (
     <section className={styles.dashboard}>
@@ -39,10 +46,10 @@ function Dashboard() {
                     <img src="assets/img_1_22_d10a5d.png" alt="a black and white image of a triangle on a white background." className={styles['product-image-display-style']} />
                   </div>
                   <div className={styles['content-wrapper']}>
-                    <p className={styles['theme-category-text-display-style']} className={styles['section-title-style']}>Overview</p>
-                    <p className={styles['theme-category-text-display-style']} className={styles['section-title-style']}>List</p>
-                    <p className={styles['theme-category-text-display-style']} className={styles['section-title-style']}>Scheduled</p>
-                    <p className={styles['theme-category-text-display-style']} className={styles['section-title-style']}>Comments</p>
+                    <p className={styles['section-title-style']}>Overview</p>
+                    <p className={styles['section-title-style']}>List</p>
+                    <p className={styles['section-title-style']}>Scheduled</p>
+                    <p className={styles['section-title-style']}>Comments</p>
                   </div>
                 </div>
                 <div className={styles['financial-summary-container']}>
@@ -55,7 +62,7 @@ function Dashboard() {
                   </div>
                   <div className={styles['order-summary-container']}>
                     <div className={styles['full-width-container']}>
-                      <input placeholder="Dashboard" type="text" className={styles['rounded-input-with-shadow']} className={styles['input-style-f62::placeholder']} />
+                      <input placeholder="Dashboard" type="text" className={styles['rounded-input-with-shadow']} />
                     </div>
                     <p className={styles['order-summary-label']}>Returns</p>
                     <p className={styles['order-summary-text']}>Order Summary</p>
@@ -70,7 +77,99 @@ function Dashboard() {
           </div>
         </div>
         <div className={styles['admin-report']}>
+          <div style={{ display: 'inline-block', width: '1140px', background: "white" }} data-ignore="used only for top most containter width">
+            <div className={styles["sales-overview-container"]}>
+              <p className={styles["sales-overview-title"]}>Sales Overview</p>
+              <div className={styles["performance-dashboard-container"]}>
+                <div className={styles["performance-overview-container"]}>
+                  <div className={styles["performance-overview-container2"]}>
+                    <div className={styles["performance-summary-container"]}>
+                      <p className={styles["performance-overview-text-style"]}>Performance Overview</p>
+                      <div className={styles["performance-overview-container1"]}>
 
+                        <input placeholder="This week's sale" type="text" className={styles["input-container1 input-style-f62::placeholder"]} />
+                      </div>
+                    </div>
+                    <div className={styles["performance-overview-section"]}>
+                      <div className={styles["sales-card"]}>
+                        <p className={styles["sales-title-text-style"]}>Total Sales</p>
+                        <p className={styles["total-sales-value-text-style"]}>489k</p>
+
+                        <button className={styles["sales-button-style"]}>+ 28.4%</button>
+                      </div>
+                      <div className={styles["sales-card"]}>
+                        <p className={styles["sales-total-text-style"]}>Total Sales</p>
+                        <p className={styles["total-sales-value-text-style"]}>3l4k</p>
+                        <div className={styles["total-sales-container"]}>
+
+                          <input placeholder="28.4%" type="text" className={styles["input-container input-style-f62::placeholder"]} />
+                        </div>
+                      </div>
+                      <div className={styles["sales-card"]}>
+                        <p className={styles["sales-title-text-style"]}>Total Sales</p>
+                        <p className={styles["total-sales-value-text-style"]}>503k</p>
+
+                        <button className={styles["sales-button-style"]}>+ 28.4%</button>
+                      </div>
+                      <div className={styles["sales-card"]}>
+                        <p className={styles["sales-title-text-style"]}>Total Sales</p>
+                        <p className={styles["total-sales-value-text-style"]}>202k</p>
+
+                        <button className={styles["sales-button-style"]}>+ 28.4%</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className={styles["performance-summary-container1"]}>
+                  <div className={styles["product-performance-container2"]}>
+                    <div className={styles["product-performance-container1"]}>
+                      <p className={styles["performance-overview-text-style"]}>Product Performance</p>
+                      <div className={styles["product-performance-container"]}>
+
+                        <input placeholder="Last 6 months" type="text" className={styles["input-container3 input-style-f62::placeholder"]} />
+                      </div>
+                    </div>
+                    <div className={styles["vertical-margin-top-28px"]}>
+                      <img src="assets/img_1_103_c5c815.png" alt="a graph showing the number of people in each month" className={styles["image-container-style"]} />
+                    </div>
+                  </div>
+                  <div className={styles["product-highlight-container"]}>
+                    <p className={styles["performance-overview-text-style"]}>Top products</p>
+                    <div className={styles["product-card-list"]}>
+                      <div className={styles["product-card"]}>
+                        <p className={styles["product-info-card1"]}>Sneakers</p>
+                        <p className={styles["product-info-card1"]}>7441,05</p>
+                      </div>
+                      <div className={styles["product-info-container2"]}>
+                        <p className={styles["product-info-card1"]}>Dresses</p>
+                        <p className={styles["product-info-card1"]}>687,14</p>
+                      </div>
+                      <div className={styles["flexbox-container-with-gap"]}>
+                        <p className={styles["product-info-card1"]}>shirts</p>
+                        <p className={styles["product-info-card1"]}>486,46</p>
+                      </div>
+                      <div className={styles["flex-column-with-gap"]}>
+                        <p className={styles["product-info-card1"]}>Jeans</p>
+                        <p className={styles["product-info-card1"]}>324,10</p>
+                      </div>
+                      <div className={styles["product-info-row"]}>
+                        <p className={styles["product-info-card1"]}>Hats</p>
+                        <p className={styles["product-info-card1"]}>169,27</p>
+                      </div>
+                      <div className={styles["product-info-container"]}>
+                        <p className={styles["product-info-card1"]}>Accessories</p>
+                        <p className={styles["product-info-card1"]}>135,46</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <h1>Sales Data</h1>
+                  <TableComponent data={data} />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
