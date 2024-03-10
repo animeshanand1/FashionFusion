@@ -5,13 +5,13 @@ import TableComponent from './components/Table';
 import TopProducts from './components/TopProducts';
 
 const data = [
-  {productName:'Kurti' ,sales: 100, revenue: 1000, percentageChange: '+10%', category: "Women's Clothing" },
-  { productName:'Shirts',sales: 200, revenue: 2000, percentageChange: '+20%', category: "kid's Clothing"  },
-  {productName:'Jacket', sales: 300, revenue: 3000, percentageChange: '+30%', category: "Women's Clothing"  },
+  { productName: 'Kurti', sales: 100, revenue: 1000, percentageChange: '+10%', category: "Women's Clothing" },
+  { productName: 'Shirts', sales: 200, revenue: 2000, percentageChange: '+20%', category: "kid's Clothing" },
+  { productName: 'Jacket', sales: 300, revenue: 3000, percentageChange: '+30%', category: "Women's Clothing" },
 ];
 function Dashboard() {
   return (
-    <section className={styles.dashboard}>
+    <section className={styles}>
       <div className={styles["dashboard-navbar"]}>
         <div className={styles["navbar-brand"]}>Welcome Admin</div>
         <div className={styles["navbar-controls"]}>
@@ -78,7 +78,7 @@ function Dashboard() {
           </div>
         </div>
         <div className={styles['admin-report']}>
-          <div style={{ display: 'inline-block', width: '1140px', background: "white" }} data-ignore="used only for top most containter width">
+          <div style={{ display: 'inline-block', width: 'auto', background: "white" }}>
             <div className={styles["sales-overview-container"]}>
               <p className={styles["sales-overview-title"]}>Sales Overview</p>
               <div className={styles["performance-dashboard-container"]}>
@@ -126,15 +126,13 @@ function Dashboard() {
                     <div className={styles["product-performance-container1"]}>
                       <p className={styles["performance-overview-text-style"]}>Product Performance</p>
                       <div className={styles["product-performance-container"]}>
-
-                        <input placeholder="Last 6 months" type="text" className={styles["input-container3 input-style-f62::placeholder"]} />
                       </div>
                     </div>
                     <div className={styles["vertical-margin-top-28px"]}>
                       <img src="assets/img_1_103_c5c815.png" alt="a graph showing the number of people in each month" className={styles["image-container-style"]} />
                     </div>
                   </div>
-                 <TopProducts/>
+                  <TopProducts />
                 </div>
                 <div>
                   <h1>Sales Data</h1>
