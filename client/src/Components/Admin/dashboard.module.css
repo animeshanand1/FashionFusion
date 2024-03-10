@@ -548,6 +548,15 @@
    0px 0px 2px rgba(23, 26, 31, 0.12);
 }
 
+.fashion-category-style {
+   box-sizing: border-box;
+   flex: 0 0 auto;
+   width: 23.48%;
+   padding-right: 0.9375rem;
+   padding-left: 0.9375rem;
+   font: 400 0.875rem Inter;
+   color: rgba(23, 26, 31, 1);
+}
 .center-details-with-percentage {
    display: flex;
    flex: 0 0 auto;

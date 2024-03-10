@@ -1,37 +1,45 @@
 import React from 'react'
-
+import styles from '../dashboard.module.css'
 function TopProducts() {
-  return (
-    <div className={styles["product-highlight-container"]}>
-    <p className={styles["performance-overview-text-style"]}>Top products</p>
-    <div className={styles["product-card-list"]}>
-      <div className={styles["product-card"]}>
-        <p className={styles["product-info-card1"]}>Sneakers</p>
-        <p className={styles["product-info-card1"]}>7441,05</p>
-      </div>
-      <div className={styles["product-info-container2"]}>
-        <p className={styles["product-info-card1"]}>Dresses</p>
-        <p className={styles["product-info-card1"]}>687,14</p>
-      </div>
-      <div className={styles["flexbox-container-with-gap"]}>
-        <p className={styles["product-info-card1"]}>shirts</p>
-        <p className={styles["product-info-card1"]}>486,46</p>
-      </div>
-      <div className={styles["flex-column-with-gap"]}>
-        <p className={styles["product-info-card1"]}>Jeans</p>
-        <p className={styles["product-info-card1"]}>324,10</p>
-      </div>
-      <div className={styles["product-info-row"]}>
-        <p className={styles["product-info-card1"]}>Hats</p>
-        <p className={styles["product-info-card1"]}>169,27</p>
-      </div>
-      <div className={styles["product-info-container"]}>
-        <p className={styles["product-info-card1"]}>Accessories</p>
-        <p className={styles["product-info-card1"]}>135,46</p>
-      </div>
-    </div>
-  </div>
-  )
+    return (
+        <div className={styles["product-highlight-container"]}>
+            <p className={styles["performance-overview-text-style"]}>Top products</p>
+            <table className={styles["product-card-list"]}>
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Revenue</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr className={styles["product-card"]}>
+                        <td>Sneakers</td>
+                        <td>7441.05</td>
+                    </tr>
+                    <tr className={styles["product-info-container2"]}>
+                        <td>Dresses</td>
+                        <td>687.14</td>
+                    </tr>
+                    <tr className={styles["flexbox-container-with-gap"]}>
+                        <td>Shirts</td>
+                        <td>486.46</td>
+                    </tr>
+                    <tr className={styles["flex-column-with-gap"]}>
+                        <td>Jeans</td>
+                        <td>324.10</td>
+                    </tr>
+                    <tr className={styles["product-info-row"]}>
+                        <td>Hats</td>
+                        <td>169.27</td>
+                    </tr>
+                    <tr className={styles["product-info-container"]}>
+                        <td>Accessories</td>
+                        <td>135.46</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    )
 }
 
 export default TopProducts
