@@ -1,0 +1,48 @@
+.dashboard{
+    background-color: rgb(208, 228, 231);
+}
+.dashboard-navbar {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+.navbar-brand {
+    font-size: 1.25rem;
+}
+
+.navbar-controls {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-items: center;
+}
+
+.admin-pic-container {
+    justify-self: end;
+    margin-right: 10px;
+}
+
+.admin-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+.notification-badge {
+    position: absolute;
+    background-color: red;
+    color: #fff;
+    border-radius: 50%;
+    padding: 5px;
+    font-size: 15px;
+    top: -5px;
+}
+.dashboard-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+.search-bar-container {
+    margin-left: 20px;
+}
