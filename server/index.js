@@ -9,14 +9,12 @@ const PORT=5000;
 require('./config/db');
 const app=express()
 app.use(express.json());
-app.use(bodyParser.json({ limit: '10mb' }));
+app.use(bodyParser.json({ limit: '100mb' }));
 app.use(bodyParser.urlencoded({ limit: '10mb', extended: true }));
 app.use(cors())
 app.use('/admin', adminRouter);
 app.use('/user',userRouter)
 app.use('/product',productsRouter)
-
-
 
 app.get('/', (req, res) => {
     res.send('Hello, world!');

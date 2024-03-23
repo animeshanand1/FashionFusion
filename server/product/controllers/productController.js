@@ -10,17 +10,28 @@ const getAllProducts = async (req, res) => {
         return res.status(500).json({ message: 'Error Occurred' })
     }
 }
-
 const addProduct = async (req, res) => {
     try {
-        const {productId,productName, brand,category,description,price,currency,sizes,colors,images,tags,availability,inventory} = req.body;
+        const { productId, productName, productCategory,productImage, price, productDescription } = req.body;
+        console.log('Received productId:', productId);
+        const newProduct = new Product({
+            productId: productId,
+            productCategory: productCategory,
+            productImage: productImage,
+            productName: productName,
+            price: price,
+            productDescription: productDescription
+        });
 
-        const newProduct = new Product({productId,productName, brand,category,description,price,currency,sizes,colors,images,tags,availability,inventory});
         const savedProduct = await newProduct.save();
-        res.status(201).json(savedProduct);
+        return res.status(201).json(savedProduct);
     } catch (error) {
         console.error(error);
-        res.status(500).json({ message: 'Error occurred while adding product' });
+        return res.status(500).json({ message: 'Error occurred while adding product' });
     }
-}
+};
+
+module.exports = addProduct;
+
+
 module.exports = { getAllProducts, addProduct }

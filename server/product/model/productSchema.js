@@ -10,60 +10,21 @@ const productSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  brand: {
+  productCategory: {
     type: String,
     required: true
   },
-  category: {
-    type: String,
-    required: true
-  },
-  description: {
+  productDescription: {
     type: String,
     required: true
   },
   price: {
-    type: Number,
+    type: String,
     required: true
   },
-  sizes: [{
+  productImage: [{
     type: String
-  }],
-  colors: [{
-    type: String
-  }],
-  images: [{
-    type: String
-  }],
-  rating: {
-    type: Number,
-    default: 0
-  },
-  reviews: [{
-    username: String,
-    rating: Number,
-    comment: String,
-    date: {
-      type: Date,
-      default: Date.now
-    }
-  }],
-  availability: {
-    type: Boolean,
-    default: true
-  },
-  inventory: {
-    type: Number,
-    default: 0
-  },
-  createdAt: {
-    type: Date,
-    default: Date.now
-  },
-  updatedAt: {
-    type: Date,
-    default: Date.now
-  }
+  }]
 });
 
 const Product = mongoose.model('Product', productSchema);
