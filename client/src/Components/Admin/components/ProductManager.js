@@ -5,7 +5,11 @@ function ProductManager() {
  const handleInput = (e) => {
   const { name, value, files } = e.target;
   if (name === 'productImage') {
-    setFormData({ ...formData, [name]: files[0] });
+    const reader = new FileReader();
+    reader.onload = () => {
+      setFormData({ ...formData, [name]: reader.result });
+    };
+    reader.readAsDataURL(files[0]);
   } else {
     setFormData({ ...formData, [name]: value });
   }
