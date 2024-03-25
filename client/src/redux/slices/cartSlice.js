@@ -1,4 +1,5 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import axios from 'axios';
 
 export const cartSlice = createSlice({
   name: 'cart',
@@ -14,6 +15,7 @@ export const cartSlice = createSlice({
         existingItem.quantity += 1;
       } else {
         state.items.push({ ...action.payload, quantity: 1 });
+        console.log(state.items,'cart payload');
       }
       state.totalItems += 1;
     },
@@ -27,6 +29,7 @@ export const cartSlice = createSlice({
     },
   },
 });
+
 
 export const { addToCart, clearCart, removeFromCart } = cartSlice.actions; 
 

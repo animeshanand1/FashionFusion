@@ -9,8 +9,8 @@ const PORT=5000;
 require('./config/db');
 const app=express()
 app.use(express.json());
-app.use(bodyParser.json({ limit: '100mb' }));
-app.use(bodyParser.urlencoded({ limit: '100mb', extended: true }));
+app.use(bodyParser.json({ limit: '10000mb' }));
+app.use(bodyParser.urlencoded({ limit: '10000mb',parameterLimit:5000, extended: true }));
 app.use(cors())
 app.use('/admin', adminRouter);
 app.use('/user',userRouter)
