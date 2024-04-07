@@ -9,10 +9,7 @@ function AllLatestProducts() {
    
     useEffect(() => {
         dispatch(fetchAllProducts());
-        // console.log(products, 'products');
     }, [dispatch]);
-
-   console.log('after dispatch', products);
 
     if (loading) {
         return <h2>Loading...</h2>;
@@ -34,11 +31,13 @@ function AllLatestProducts() {
                 width: '',
                 padding: "1rem"
             }}> 
-            {products.map((product) => (<LatestProductsCard onClick={()=>dispatch(addToCart(product._id))} key={product._id} 
+            {products.map((product) => (
+            <LatestProductsCard productId={product._id} 
             productName={product.productName}
             productDescription={product.productDescription}
             productPrice={product.price}
             productImg={product.productImage}
+            productCategory={product.productCategory}
             />))}
                 
             </section>

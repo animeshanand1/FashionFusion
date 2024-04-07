@@ -13,7 +13,7 @@
 
 .savedCart {
   flex-direction: column;
-  width:70%;
+  width:80%;
 }
 
 .cart-box {
@@ -21,15 +21,15 @@
   margin-top: 10px;
   align-items: center;
   justify-content: space-between;
-  padding: 15px;
+  padding: 20px;
 }
 .box-deatils {
   justify-content: space-between;
-  gap: 10px;
+  gap: 15px;
 }
 
 .box-item-img{
-  width: 80px;
+  width: 100px;
 }
 .box-item-description {
   flex-direction: column;

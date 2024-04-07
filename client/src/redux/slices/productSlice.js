@@ -13,7 +13,7 @@ const fetchAllProducts = createAsyncThunk('products/fetchAllProducts', async () 
     try {
         const response = await axios.get('http://localhost:5000/product/all-products');
         const productData= response.data;
-        // console.log(productData, 'resposne');
+        
         return productData;
     } catch (error) {
         console.error(error);
@@ -38,7 +38,6 @@ const productSlice = createSlice({
                 state.loading = false;
                 state.products = action.payload.products;
                 state.error = null;
-                // console.log(state.products,'yes'); // Check if the products are coming
             })
             .addCase(fetchAllProducts.rejected, (state, action) => {
                 state.loading = false;

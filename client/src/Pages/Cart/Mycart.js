@@ -1,16 +1,77 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./mycart.module.css";
 import CartCard from "./CartCard";
+import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 function Mycart() {
+  const items = useSelector((state) => state.cart.items);
+  const totalPrice = useSelector((state) => state.cart.totalPrice);
+ let TotalSum=totalPrice+(totalPrice*0.1);
+  const divStyle = {
+    backgroundColor: '#fff',
+    borderRadius: '8px',
+    padding: '20px',
+    boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
+    maxWidth: '400px',
+    margin: '0 auto',
+    textAlign: 'center',
+  };
+
+  const smileyStyle = {
+    fontSize: '50px',
+    marginBottom: '20px',
+  };
+
+  const buttonStyle = {
+    display: 'inline-block',
+    padding: '10px 20px',
+    backgroundColor: '#007bff',
+    color: '#fff',
+    textDecoration: 'none',
+    borderRadius: '5px',
+    marginTop: '20px',
+    transition: 'background-color 0.3s ease',
+  };
+
+  const handleMouseOver = (e) => {
+    e.target.style.backgroundColor = '#0056b3';
+  };
+
+  const handleMouseOut = (e) => {
+    e.target.style.backgroundColor = '#007bff';
+  };
   return (
     <>
       <div className={styles.cartMain}>
         <div className={styles["summary-wrapper"]}>
           <div className={styles["cart-component"]}>
-            <CartCard category='Summer Dress' price='1299' description='Linen Fabrics' quantity='1'/>
-            <CartCard category='Pullover' price='1099' description='Linen Fabrics' quantity='1'/>
-            <CartCard category='Casual Wear' price='1099' description='Linen Fabrics' quantity='1'/>
+            {items.length > 0 ? (
+              items.map((item) => {
+                  return (
+                    <CartCard category={item.category} price={item.price} quantity={item.quantity} image={item.image}  />
+                  );
+                })
+            ) : (
+              <div style={divStyle}>
+              <div style={smileyStyle}>😕</div>
+              <h1 style={{ color: '#333' }}>Your Cart is Empty!</h1>
+              <p>
+                Oh dear, it looks like your cart is feeling a bit light at the moment. But don't worry, we'll fix that and turn
+                those frowns into smiles!
+              </p>
+              <p>How about we sprinkle some happiness into your shopping experience?</p>
+              <Link
+                to="/"
+                style={buttonStyle}
+                onMouseOver={handleMouseOver}
+                onMouseOut={handleMouseOut}
+              >
+                Add Some Joy!
+              </Link>
+            </div>
+            )}
+
           </div>
           <div className={styles["payment-card-container"]}>
             <form className={styles["card-background"]}>
@@ -40,13 +101,13 @@ function Mycart() {
                     <div>Total (Tax incl.)</div>
                   </div>
                   <div className={styles["price-amount-col"]}>
-                    <div>$1,668</div>
-                    <div>$4</div>
-                    <div>$1,672</div>
+                    <div>{'\u20B9'}{totalPrice}</div>
+                    <div>{'\u20B9'}4</div>
+                    <div>{'\u20B9'}{TotalSum}</div>
                   </div>
                 </div>
                 <div className={styles["checkout-container"]}>
-                  <div className={styles["checkout-total"]}>$1,672</div>
+                  <div className={styles["checkout-total"]}>{'\u20B9'}{TotalSum}</div>
                   <div className={styles["checkout-total"]}>Checkout</div>
                 </div>
               </div>

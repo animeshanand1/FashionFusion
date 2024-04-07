@@ -11,7 +11,7 @@ function Topbar() {
   const [isClicked, setIsClicked] = useState(false);
   const [userData, setUserData] = useState(null);
   const totalAddedItems=useSelector( (state)=>state.cart.totalItems)
-  console.log(totalAddedItems,'x');
+
   
   useEffect(() => {
     const fetchData = async () => {
